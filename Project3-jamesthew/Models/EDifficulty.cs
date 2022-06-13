@@ -1,6 +1,6 @@
-﻿using System;
+﻿namespace Project3_jamesthew.Models;
 
 public enum EDifficulty
 {
-	VERY EASY, EASY, MEDIUM, HARD, EXPERT 
+    VeryEasy, Easy, Medium, Hard, Expert 
 }

@@ -19,7 +19,7 @@ builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(build
 
 builder.Services.Configure<ApplicationSettings>(builder.Configuration.GetSection("ApplicationSettings"));
 
-builder.Services.AddIdentity<User,IdentityRole>().AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<UserEntity,IdentityRole>().AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 //Jwt 
 var key = Encoding.UTF8.GetBytes(builder.Configuration["ApplicationSettings:Jwt_Secret"].ToString());
 builder.Services.AddAuthentication(x =>
