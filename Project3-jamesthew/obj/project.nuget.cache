@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bP1xuSf6GqTPUI2WgXxBQedtQcTjDr9fbxpWd9kR5lzHW+n4KeLucCprTW1lD24IujEoSd6MausKUvD/80Fa/w==",
+  "dgSpecHash": "24qu7LSalXKZTI1QDs3oHrF/GpyYrpI3fmk6kjVHbjPTerrX3Ezt9KsKTEwqDApqDPq6QEVySHpqAc3ugh861g==",
   "success": true,
-  "projectFilePath": "D:\\DemoAbp\\Angular\\Project3-jamesthew\\API\\Project3-jamesthew\\Project3-jamesthew.csproj",
+  "projectFilePath": "C:\\Users\\quocv\\OneDrive\\Tài liệu\\GitHub\\API\\Project3-jamesthew\\Project3-jamesthew.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\quocv\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\quocv\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

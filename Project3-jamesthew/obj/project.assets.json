@@ -9864,11 +9864,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DemoAbp\\Angular\\Project3-jamesthew\\API\\Project3-jamesthew\\Project3-jamesthew.csproj",
+      "projectUniqueName": "C:\\Users\\quocv\\OneDrive\\Tài liệu\\GitHub\\API\\Project3-jamesthew\\Project3-jamesthew.csproj",
       "projectName": "Project3-jamesthew",
-      "projectPath": "D:\\DemoAbp\\Angular\\Project3-jamesthew\\API\\Project3-jamesthew\\Project3-jamesthew.csproj",
+      "projectPath": "C:\\Users\\quocv\\OneDrive\\Tài liệu\\GitHub\\API\\Project3-jamesthew\\Project3-jamesthew.csproj",
       "packagesPath": "C:\\Users\\quocv\\.nuget\\packages\\",
-      "outputPath": "D:\\DemoAbp\\Angular\\Project3-jamesthew\\API\\Project3-jamesthew\\obj\\",
+      "outputPath": "C:\\Users\\quocv\\OneDrive\\Tài liệu\\GitHub\\API\\Project3-jamesthew\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\quocv\\AppData\\Roaming\\NuGet\\NuGet.Config",
