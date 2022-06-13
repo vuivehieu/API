@@ -26,11 +26,11 @@ namespace Project3_jamesthew.Controllers
         }
         [HttpPost]
         [Route("Register")]
-        public async Task<IActionResult> RegisterUser(UserViewModel model)
+        public async Task<IActionResult> RegisterUser(UserDto model)
         {
             var user = new UserEntity()
             {
-                UserName = model.UserName,
+                UserName = model.Username,
                 Email = model.Email,
                 FullName = model.FullName,
             };

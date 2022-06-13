@@ -27,7 +27,7 @@ namespace Project3_jamesthew.Models
             IngredientId = ingredientId;
             IngredientName = ingredientName;
             Quantity = quantity;
-            RecipeId = recipeId;\
+            RecipeId = recipeId;
         }
     }
 }
