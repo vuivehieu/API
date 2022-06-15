@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿/*using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project3_jamesthew.Models
@@ -37,5 +37,10 @@ namespace Project3_jamesthew.Models
         {
             
         }
+        public ICollection<RecipesCompetition> RecipesCompetitions { get; set; }
+
+        public ICollection<Announce> Announces { get; set; }
+        public virtual Category Category { get; set; }
     }
 }
+*/

@@ -10,8 +10,8 @@ namespace Project3_jamesthew.Controllers
     [ApiController]
     public class ProfileController : ControllerBase
     {
-        private UserManager<UserEntity> _userMng;
-        public ProfileController(UserManager<UserEntity> userMng)
+        private UserManager<User> _userMng;
+        public ProfileController(UserManager<User> userMng)
         {
             _userMng = userMng;
         }

@@ -7,7 +7,6 @@ using Project3_jamesthew.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Microsoft.CSharp.RuntimeBinder;
 
 namespace Project3_jamesthew.Controllers
 {
@@ -15,10 +14,10 @@ namespace Project3_jamesthew.Controllers
     [ApiController]
     public class AdminAppController : ControllerBase
     {
-        private UserManager<UserEntity> _userMng;
-        private SignInManager<UserEntity> _signInMng;
+        private UserManager<User> _userMng;
+        private SignInManager<User> _signInMng;
         private readonly ApplicationSettings _appSettings;
-        public AdminAppController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInMng,IOptions<ApplicationSettings> appSettings)
+        public AdminAppController(UserManager<User> userManager, SignInManager<User> signInMng,IOptions<ApplicationSettings> appSettings)
         {
             _userMng = userManager;
             _signInMng = signInMng;
@@ -26,11 +25,11 @@ namespace Project3_jamesthew.Controllers
         }
         [HttpPost]
         [Route("Register")]
-        public async Task<IActionResult> RegisterUser(UserDto model)
+        public async Task<IActionResult> RegisterUser(UserViewModel model)
         {
-            var user = new UserEntity()
+            var user = new User()
             {
-                UserName = model.Username,
+                UserName = model.UserName,
                 Email = model.Email,
                 FullName = model.FullName,
             };
@@ -41,50 +40,33 @@ namespace Project3_jamesthew.Controllers
             }
             catch(Exception ex)
             {
-                throw new RuntimeBinderException("Not found");
+                throw ex;
             }
         }
         [HttpPost]
         [Route("Login")]
         public async Task<IActionResult> Login(LoginModel model)
         {
-            var user = await _userMng.FindByNameAsync(model.Username);
-            SecurityTokenDescriptor tokenDescriptor = null;
-            if (user != null && await _userMng.CheckPasswordAsync(user, model.Password))
+            var user = await _userMng.FindByNameAsync(model.UserName);
+            if(user != null && await _userMng.CheckPasswordAsync(user, model.Password))
             {
-                if (model.Remember)
+                var tokenDescriptor = new SecurityTokenDescriptor
                 {
-                    tokenDescriptor = new SecurityTokenDescriptor
+                    Subject = new ClaimsIdentity(new Claim[]
                     {
-                        Subject = new ClaimsIdentity(new Claim[]
-                        {
-                            new Claim("UserId",user.Id.ToString())
-                        }),
-                        Expires = DateTime.UtcNow.AddDays(1),
-                        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.JwtSecret)), SecurityAlgorithms.HmacSha256Signature)
-                    };
-                }
-                else
-                {
-                    tokenDescriptor = new SecurityTokenDescriptor
-                    {
-                        Subject = new ClaimsIdentity(new Claim[]
-                        {
-                            new Claim("UserId",user.Id.ToString())
-                        }),
-                        Expires = DateTime.UtcNow.AddDays(7),
-                        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.JwtSecret)), SecurityAlgorithms.HmacSha256Signature)
-                    };
-                }
-                
+                        new Claim("UserId",user.Id.ToString())
+                    }),
+                    Expires = DateTime.UtcNow.AddDays(1),
+                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.Jwt_Secret)), SecurityAlgorithms.HmacSha256Signature)
+                };
                 var tokenHandler = new JwtSecurityTokenHandler();
-                var securityToken = tokenHandler.CreateToken(tokenDescriptor);
-                var token = tokenHandler.WriteToken(securityToken);
+                var sercurityToken = tokenHandler.CreateToken(tokenDescriptor);
+                var token = tokenHandler.WriteToken(sercurityToken);
                 return Ok(new {token});
             }
             else
             {
-                return BadRequest(new {message ="Username or password incorrect."});
+                return BadRequest(new {message ="Usename or password incorrect."});
             }
         }
     }

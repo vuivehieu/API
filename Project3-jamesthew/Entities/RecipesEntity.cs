@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿/*using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project3_jamesthew.Models
@@ -86,5 +86,9 @@ namespace Project3_jamesthew.Models
         {
             
         }
+        public virtual CategoryEntity Category { get; set; }
+        public ICollection<IngredientEntity> Ingredients { get; set; }
+        public ICollection<UserIngredientEntity> UserIngredients { get; set; }
     }
 }
+*/

@@ -10,6 +10,6 @@ namespace Project3_jamesthew.NewFolder
         {
 
         }
-        public DbSet<UserEntity> users { get; set; }
+        public DbSet<User> users { get; set; }
     }
 }

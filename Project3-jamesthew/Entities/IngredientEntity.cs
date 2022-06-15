@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿/*using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project3_jamesthew.Models
@@ -15,7 +15,7 @@ namespace Project3_jamesthew.Models
         public string Quantity { get; set; }
         [Column(TypeName = "int(50)")]
 
-        public RecipesEntity Recipes { get; set; }
+        public virtual RecipesEntity Recipes { get; set; }
 
 
         public IngredientEntity(int ingredientId, string ingredientName, string quantity, RecipesEntity recipes)
@@ -32,3 +32,4 @@ namespace Project3_jamesthew.Models
         }
     }
 }
+*/

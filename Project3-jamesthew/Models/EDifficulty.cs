@@ -1,6 +1,7 @@
-﻿namespace Project3_jamesthew.Models;
-
-public enum EDifficulty
+﻿namespace Project3_jamesthew.Models
 {
-    VeryEasy, Easy, Medium, Hard, Expert 
+    public enum EDifficulty
+    {
+        VeryEasy, Easy, Medium, Hard, Expert
+    }
 }

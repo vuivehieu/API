@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿/*using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project3_jamesthew.Models
@@ -29,5 +29,7 @@ namespace Project3_jamesthew.Models
             IsPaid = isPaid;
             UserId = userId;
         }
+        public virtual Category Category { get; set; }
     }
 }
+*/

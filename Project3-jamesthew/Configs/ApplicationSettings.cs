@@ -1,4 +1,4 @@
-﻿namespace Project3_jamesthew.Models
+﻿namespace Project3_jamesthew.Configs
 {
     public class ApplicationSettings
     {
@@ -9,5 +9,10 @@
 
         public string JwtSecret { get; set; }
 
+        public ApplicationSettings()
+        {
+
+        }
     }
+
 }

@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿/*using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project3_jamesthew.Models
@@ -51,7 +51,12 @@ namespace Project3_jamesthew.Models
             UserPic = userPic;
             UserDescription = userDescription;
         }
+        public virtual Contest Contest { get; set; }
+        public ICollection<UserIngredient> UserIngredients { get; set; }
+        public ICollection<Announce> Announces { get; set; }
+        public ICollection<IngredientCompetition> IngredientCompetitions { get; set; }
 
 
     }
 }
+*/

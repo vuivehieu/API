@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿/*using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project3_jamesthew.Models
@@ -33,5 +33,9 @@ namespace Project3_jamesthew.Models
         {
             
         }
+        public ICollection<Contest> Contest { get; set; }
+        public ICollection<UserRecipies> UserRecipies { get; set; }
+        public ICollection<Recipes> Recipes { get; set; }
     }
 }
+*/
