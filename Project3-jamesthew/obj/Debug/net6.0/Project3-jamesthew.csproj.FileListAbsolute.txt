@@ -805,3 +805,5 @@ G:\Work\Aptech\eProject03\API\Project3-jamesthew\obj\Debug\net6.0\refint\Project
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\obj\Debug\net6.0\Project3-jamesthew.pdb
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\obj\Debug\net6.0\Project3-jamesthew.genruntimeconfig.cache
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\obj\Debug\net6.0\ref\Project3-jamesthew.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\MySqlConnector.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
