@@ -536,20 +536,31 @@ C:\Users\quocv\OneDrive\Tài liệu\GitHub\API\Project3-jamesthew\obj\Debug\ne
 C:\Users\quocv\OneDrive\Tài liệu\GitHub\API\Project3-jamesthew\obj\Debug\net6.0\Project3-jamesthew.pdb
 C:\Users\quocv\OneDrive\Tài liệu\GitHub\API\Project3-jamesthew\obj\Debug\net6.0\Project3-jamesthew.genruntimeconfig.cache
 C:\Users\quocv\OneDrive\Tài liệu\GitHub\API\Project3-jamesthew\obj\Debug\net6.0\ref\Project3-jamesthew.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Project3-jamesthew.exe
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Project3-jamesthew.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.OpenApi.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\appsettings.Development.json
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\appsettings.json
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Project3-jamesthew.exe
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Project3-jamesthew.deps.json
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Project3-jamesthew.runtimeconfig.json
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Project3-jamesthew.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Project3-jamesthew.pdb
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Humanizer.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\MessagePack.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\MessagePack.Annotations.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.Build.Locator.dll
@@ -570,21 +581,14 @@ G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.Code
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.DiaSymReader.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.Identity.Client.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.OpenApi.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.VisualStudio.Debugger.Contracts.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -594,6 +598,7 @@ G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.Visu
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\MySqlConnector.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Newtonsoft.Json.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\NuGet.Common.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\NuGet.Configuration.dll
@@ -604,9 +609,7 @@ G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\NuGet.Packagin
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\NuGet.ProjectModel.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\NuGet.Protocol.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\NuGet.Versioning.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.Composition.AttributedModel.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.Composition.Convention.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.Composition.Hosting.dll
@@ -614,7 +617,6 @@ G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.Composi
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.Composition.TypedParts.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.Drawing.Common.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.Runtime.Caching.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\System.Security.Permissions.dll
@@ -805,5 +807,3 @@ G:\Work\Aptech\eProject03\API\Project3-jamesthew\obj\Debug\net6.0\refint\Project
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\obj\Debug\net6.0\Project3-jamesthew.pdb
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\obj\Debug\net6.0\Project3-jamesthew.genruntimeconfig.cache
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\obj\Debug\net6.0\ref\Project3-jamesthew.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\MySqlConnector.dll
-G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
