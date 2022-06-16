@@ -6,42 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4009f7e-b5de-4da4-a1dd-545ac6541e41" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Project3-jamesthew/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Project3-jamesthew/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Project3-jamesthew/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Project3-jamesthew/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Project3-jamesthew/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Project3-jamesthew/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/config/applicationhost.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project3-jamesthew/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/MySqlConnector.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Pomelo.EntityFrameworkCore.MySql.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project3-jamesthew/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project3-jamesthew/entrypoint.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Project3-jamesthew/DesignTimeBuild/.dtbcache.v2" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project3-jamesthew/DesignTimeBuild/.dtbcache.v2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Project3-jamesthew/v17/.futdcache.v1" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project3-jamesthew/v17/.futdcache.v1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/Project3-jamesthew/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Project3-jamesthew/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/Project3-jamesthew.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/Project3-jamesthew.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.deps.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/ref/Project3-jamesthew.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/ref/Project3-jamesthew.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/refint/Project3-jamesthew.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/refint/Project3-jamesthew.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Project3-jamesthew.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Project3-jamesthew.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Project3-jamesthew.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Project3-jamesthew.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +82,7 @@
       <updated>1655366725379</updated>
       <workItem from="1655366755779" duration="927000" />
       <workItem from="1655392659602" duration="612000" />
-      <workItem from="1655394136504" duration="1365000" />
+      <workItem from="1655394136504" duration="2221000" />
     </task>
     <servers />
   </component>

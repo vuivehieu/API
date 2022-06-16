@@ -1,4 +1,5 @@
-﻿FROM microsoft/dotnet:2.1-sdk
+﻿# syntax=docker/dockerfile:1
+FROM bitnami/dotnet-sdk:latest
 COPY . /app
 WORKDIR /app
 RUN ["dotnet", "restore"]
