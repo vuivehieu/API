@@ -12,8 +12,8 @@ using Project3_jamesthew.Data;
 namespace Project3_jamesthew.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220606095610_init")]
-    partial class init
+    [Migration("20220617072342_cate")]
+    partial class cate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -226,6 +226,60 @@ namespace Project3_jamesthew.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.CategoryEntity", b =>
+                {
+                    b.Property<int>("CategoryId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"), 1L, 1);
+
+                    b.Property<string>("CategoryDescription")
+                        .IsRequired()
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<string>("CategoryIcon")
+                        .IsRequired()
+                        .HasColumnType("varchar(300)");
+
+                    b.Property<string>("CategoryImg")
+                        .IsRequired()
+                        .HasColumnType("varchar(1000)");
+
+                    b.Property<string>("CategoryName")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("CategoryId");
+
+                    b.ToTable("categories");
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.TipsEntity", b =>
+                {
+                    b.Property<int>("TipsId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TipsId"), 1L, 1);
+
+                    b.Property<string>("TipsDescription")
+                        .IsRequired()
+                        .HasColumnType("varchar(250)");
+
+                    b.Property<string>("TipsImage")
+                        .IsRequired()
+                        .HasColumnType("varchar(1500)");
+
+                    b.Property<string>("TipsTitle")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)");
+
+                    b.HasKey("TipsId");
+
+                    b.ToTable("tipsEntities");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Models.User", b =>

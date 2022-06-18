@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Project3_jamesthew.Models;
-using Project3_jamesthew.NewFolder;
+using Project3_jamesthew.Data;
 using Project3_jamesthew.Repository;
 using System.Text;
 
@@ -19,6 +19,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataContext")));
 
 builder.Services.AddTransient<ITipsRepository,TipsRepository>();
+builder.Services.AddTransient<ICategoriesRepository, CategoriesRepository>();
 
 builder.Services.Configure<ApplicationSettings>(builder.Configuration.GetSection("ApplicationSettings"));
 
