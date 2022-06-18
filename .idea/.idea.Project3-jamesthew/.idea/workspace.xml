@@ -5,7 +5,9 @@
     <projectFile profileName="IIS Express">Project3-jamesthew/Project3-jamesthew.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4009f7e-b5de-4da4-a1dd-545ac6541e41" name="Changes" comment="" />
+    <list default="true" id="a4009f7e-b5de-4da4-a1dd-545ac6541e41" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/Dockerfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +85,7 @@
       <workItem from="1655392659602" duration="612000" />
       <workItem from="1655394136504" duration="2221000" />
       <workItem from="1655538127101" duration="4990000" />
-      <workItem from="1655553523244" duration="1018000" />
+      <workItem from="1655553523244" duration="1409000" />
     </task>
     <servers />
   </component>
