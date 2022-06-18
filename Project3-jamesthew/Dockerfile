@@ -1,4 +1,4 @@
-﻿# syntax=docker/dockerfile:1
+﻿#syntax=docker/dockerfile:1
 FROM bitnami/dotnet-sdk:latest
 COPY . /app
 WORKDIR /app
