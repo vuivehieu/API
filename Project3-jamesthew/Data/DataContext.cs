@@ -7,7 +7,7 @@ namespace Project3_jamesthew.NewFolder
 {
     public class DataContext : IdentityDbContext
     {
-        public DataContext(DbContextOptions options) : base(options)
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
 
         }
