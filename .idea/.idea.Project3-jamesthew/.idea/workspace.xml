@@ -5,20 +5,7 @@
     <projectFile profileName="IIS Express">Project3-jamesthew/Project3-jamesthew.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4009f7e-b5de-4da4-a1dd-545ac6541e41" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project3-jamesthew/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project3-jamesthew/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/bin/Debug/net6.0/Project3-jamesthew.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/Project3-jamesthew.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/Debug/net6.0/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project3-jamesthew/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/Project3-jamesthew/obj/staticwebassets.pack.sentinel" afterDir="false" />
-    </list>
+    <list default="true" id="a4009f7e-b5de-4da4-a1dd-545ac6541e41" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +83,7 @@
       <workItem from="1655392659602" duration="612000" />
       <workItem from="1655394136504" duration="2221000" />
       <workItem from="1655538127101" duration="4990000" />
-      <workItem from="1655553523244" duration="580000" />
+      <workItem from="1655553523244" duration="1018000" />
     </task>
     <servers />
   </component>

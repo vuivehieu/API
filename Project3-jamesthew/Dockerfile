@@ -6,7 +6,7 @@ RUN ["dotnet","restore"]
 
 COPY Project3-jamesthew/. ./Project3-jamesthew/
 WORKDIR /source/Project3-jamesthew
-RUN ["dotnet","publish -c release -o /app --no-restore"]
+RUN ["dotnet","publish -c release -o /app -r linux-64 --no-restore"]
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app
