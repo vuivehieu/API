@@ -8,6 +8,7 @@ using Project3_jamesthew.Models;
 using Project3_jamesthew.NewFolder;
 using Project3_jamesthew.Repository;
 using System.Text;
+using Microsoft.AspNetCore.HttpOverrides;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -69,6 +70,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
     app.UseHttpsRedirection();
 }
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.All
+});
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseCors("default");
