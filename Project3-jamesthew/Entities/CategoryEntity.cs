@@ -34,6 +34,9 @@ namespace Project3_jamesthew.Entitites
         {
             
         }
+        public ICollection<RecipesEntity>? recipes { get; }
+        public ICollection<ContestEntity>? contests { get; set; }
+       
 
     }
 }

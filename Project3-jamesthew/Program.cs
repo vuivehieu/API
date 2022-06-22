@@ -11,7 +11,7 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = @"Server=db;Database=master;User=sa;Password=1234;";
+var connectionString = "Server=DESKTOP-A0MJBE0\\SQLEXPRESS;Database=Project3DB;Trusted_Connection=True;MultipleActiveResultSets=true";
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -20,6 +20,10 @@ builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(conne
 
 builder.Services.AddTransient<ITipsRepository,TipsRepository>();
 builder.Services.AddTransient<ICategoriesRepository, CategoriesRepository>();
+builder.Services.AddTransient<IRecipeRepository, RecipeRepository>();
+builder.Services.AddTransient<IUserIngredientRepository, UserIngredientRepository>();
+builder.Services.AddTransient<IContestRepository, ContestRepository>();
+builder.Services.AddTransient<IRecipesCompeRepository, RecipesCompetitionRepository>();
 
 builder.Services.Configure<ApplicationSettings>(builder.Configuration.GetSection("ApplicationSettings"));
 

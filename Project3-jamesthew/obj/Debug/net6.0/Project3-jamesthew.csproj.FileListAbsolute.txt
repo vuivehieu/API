@@ -807,3 +807,5 @@ G:\Work\Aptech\eProject03\API\Project3-jamesthew\obj\Debug\net6.0\Project3-james
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\obj\Debug\net6.0\ref\Project3-jamesthew.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\MySqlConnector.dll
 G:\Work\Aptech\eProject03\API\Project3-jamesthew\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\quocv\OneDrive\Tài liệu\GitHub\API\Project3-jamesthew\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\quocv\OneDrive\Tài liệu\GitHub\API\Project3-jamesthew\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
