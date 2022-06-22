@@ -1,7 +1,7 @@
-﻿/*using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Project3_jamesthew.Models
+namespace Project3_jamesthew.Entitites
 {
     public class UserIngredientEntity
     {
@@ -13,23 +13,22 @@ namespace Project3_jamesthew.Models
         [Column(TypeName = "varchar(30)")]
         [Required]
         public string Quantity { get; set; }
-        [Column(TypeName = "int(20)")]
-       
-        public string RecipeId { get; set; }
+        [StringLength(20)]
+        [ForeignKey("Recipes")]
+        public int RecipesId { get; set; }
 
         public UserIngredientEntity()
         {
             
-        }s
+        }
 
-        public UserIngredientEntity(int ingredientId, string ingredientName, string quantity, string recipeId)
+        public UserIngredientEntity(int ingredientId, string ingredientName, string quantity, int recipesId)
         {
             IngredientId = ingredientId;
             IngredientName = ingredientName;
             Quantity = quantity;
-            RecipeId = recipeId;
+            RecipesId = recipesId;
         }
-        public virtual RecipesEntity Recipes { get; set; }
+        public  RecipesEntity? Recipes { get; set; }
     }
 }
-*/

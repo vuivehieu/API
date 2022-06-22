@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Project3_jamesthew.Entitites;
-using Project3_jamesthew.NewFolder;
+using Project3_jamesthew.Data;
 
 namespace Project3_jamesthew.Repository
 {

@@ -1,7 +1,8 @@
-﻿/*using System.ComponentModel.DataAnnotations;
+﻿using Project3_jamesthew.Models;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Project3_jamesthew.Models
+namespace Project3_jamesthew.Entitites
 {
 
     public class RecipesEntity
@@ -9,44 +10,45 @@ namespace Project3_jamesthew.Models
         [Key]
         public int RecipesId { get; set; }
 
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
         [Required]
         public int PrepationTime { get; set; }
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
         [Required]
         public int CookingTime { get; set; }
 
         [Column(TypeName = "varchar(30)")]
         [Required]
         public EDifficulty Difficulty { get; set; }
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
         [Required]
         public int Serve { get; set; }
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
         [Required]
         public int Calories { get; set; }
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
         [Required]
         public int Proteins { get; set; }
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
         [Required]
         public int Carbs { get; set; }
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
         [Required]
         public int Fat { get; set; }
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
         [Required]
         public int SaturatedFat { get; set; }
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
         [Required]
         public int Fiber { get; set; }
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
         [Required]
         public int Sugar { get; set; }
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
         [Required]
         public int Salt { get; set; }
-        [Column(TypeName = "int(20)")]
+        [StringLength(20)]
+        [ForeignKey("Category")]
         public int CategoriesId  { get; set; }
         [Column(TypeName = "varchar(30)")]
         [Required]
@@ -57,7 +59,7 @@ namespace Project3_jamesthew.Models
         [Column(TypeName = "varchar(30)")]
         [Required]
         public string RecipesDescription { get; set; }
-        [Column(TypeName = "byte")]
+        
         public bool IsPaid { get; set; }
 
         public RecipesEntity(int recipesId, int prepationTime, int cookingTime, EDifficulty difficulty, int serve, int calories, int proteins, int carbs, int fat, int saturatedFat, int fiber, int sugar, int salt, int categoriesId, string recipesPic, string recipesTitle, string recipesDescription, bool isPaid)
@@ -86,9 +88,8 @@ namespace Project3_jamesthew.Models
         {
             
         }
-        public virtual CategoryEntity Category { get; set; }
-        public ICollection<IngredientEntity> Ingredients { get; set; }
-        public ICollection<UserIngredientEntity> UserIngredients { get; set; }
+        public CategoryEntity? Category { get; set; }
+        public ICollection<UserIngredientEntity>? UserIngredients { get; set; }
+
     }
 }
-*/

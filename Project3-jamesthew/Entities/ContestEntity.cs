@@ -1,7 +1,7 @@
-﻿/*using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Project3_jamesthew.Models
+namespace Project3_jamesthew.Entitites
 {
     public class ContestEntity
     {
@@ -14,9 +14,9 @@ namespace Project3_jamesthew.Models
         public DateTime ContestStart { get; set; }
         [Required]
         public DateTime ContestEnd { get; set; }
-        [Column(TypeName = "int(30)")]
+        [StringLength(20)]
+        [ForeignKey("Category")]
         public int CategoryId { get; set; }
-        [Column(TypeName = "byte")]
         public bool IsOpen { get; set; }
         [Column(TypeName = "varchar(1000)")]
         [Required]
@@ -37,10 +37,10 @@ namespace Project3_jamesthew.Models
         {
             
         }
-        public ICollection<RecipesCompetition> RecipesCompetitions { get; set; }
+       
+    /*    public ICollection<Announce> Announces { get; set; }*/
+        public CategoryEntity? Category { get; set; }
+        public ICollection<RecipesCompetitionEntity> RecipesCompetitions { get; set; }
 
-        public ICollection<Announce> Announces { get; set; }
-        public virtual Category Category { get; set; }
     }
 }
-*/

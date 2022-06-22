@@ -1,7 +1,7 @@
-﻿/*using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Project3_jamesthew.Models
+namespace Project3_jamesthew.Entitites
 {
     public class AnnounceEntity
     {
@@ -13,7 +13,7 @@ namespace Project3_jamesthew.Models
         [Required]
         public string Email { get; set; }
         [Required]
-        [Column(TypeName = "int(10)")]
+        [StringLength(20)]
         public int ContestId { get; set; }
         [Required]
         [Column(TypeName = "int(10)")]
@@ -31,8 +31,7 @@ namespace Project3_jamesthew.Models
             this.RecipeCompetitionId = recipeCompetitionId;
             this.Email = email;
         }
-        public Contest Contest { get; set; }
-        public virtual RecipesCompetition RecipesCompetition { get; set; }
+        public ContestEntity Contest { get; set; }
+       /* public virtual RecipesCompetition RecipesCompetition { get; set; }*/
     }
 }
-*/
