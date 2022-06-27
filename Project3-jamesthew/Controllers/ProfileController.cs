@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Project3_jamesthew.Entitites;
 using Project3_jamesthew.Models;
 
 namespace Project3_jamesthew.Controllers
@@ -10,8 +11,8 @@ namespace Project3_jamesthew.Controllers
     [ApiController]
     public class ProfileController : ControllerBase
     {
-        private UserManager<User> _userMng;
-        public ProfileController(UserManager<User> userMng)
+        private UserManager<UserEntity> _userMng;
+        public ProfileController(UserManager<UserEntity> userMng)
         {
             _userMng = userMng;
         }
@@ -27,6 +28,12 @@ namespace Project3_jamesthew.Controllers
                 user.Email,
                 user.UserName
             };
+        }
+        [NonAction]
+        public async Task<UserEntity> getCurrentUser()
+        {
+            String userId = User.Claims.First(c => c.Type == "User").Value;
+            return await _userMng.FindByIdAsync(userId);
         }
     }
 }

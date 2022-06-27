@@ -1,4 +1,5 @@
 ﻿using Project3_jamesthew.Entitites;
+using Project3_jamesthew.Models;
 
 namespace Project3_jamesthew.Repository
 {
@@ -6,8 +7,8 @@ namespace Project3_jamesthew.Repository
     {
         Task<List<CategoryEntity>> GetAllCategory(string search);
         Task<CategoryEntity> GetCategoryById(int Id);
-        Task<CategoryEntity> AddCategory(CategoryEntity cate);
-        Task<CategoryEntity> UpdateCategory(CategoryEntity cate);
+        Task<CategoryEntity> AddCategory(CategoryModel cate);
+        Task<CategoryEntity> UpdateCategory(CategoryModel cate);
         Task DeleteCategory(int Id);
     }
 }

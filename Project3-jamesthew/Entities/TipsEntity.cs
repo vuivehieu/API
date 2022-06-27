@@ -20,7 +20,6 @@ namespace Project3_jamesthew.Entitites
         [NotMapped]
         public IFormFile ImageFile { get; set; }
 
-
         [NotMapped]
         public string ImageSrc { get; set; }
         public TipsEntity(int tipsId, string tipsImage, string tipsDescription, string tipsTitle)

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\quocv\\OneDrive\\Tài liệu\\GitHub\\API\\Project3-jamesthew\\Project3-jamesthew.csproj": {}
+    "G:\\Work\\Aptech\\eProject03\\API\\Project3-jamesthew\\Project3-jamesthew.csproj": {}
   },
   "projects": {
-    "C:\\Users\\quocv\\OneDrive\\Tài liệu\\GitHub\\API\\Project3-jamesthew\\Project3-jamesthew.csproj": {
+    "G:\\Work\\Aptech\\eProject03\\API\\Project3-jamesthew\\Project3-jamesthew.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\quocv\\OneDrive\\Tài liệu\\GitHub\\API\\Project3-jamesthew\\Project3-jamesthew.csproj",
+        "projectUniqueName": "G:\\Work\\Aptech\\eProject03\\API\\Project3-jamesthew\\Project3-jamesthew.csproj",
         "projectName": "Project3-jamesthew",
-        "projectPath": "C:\\Users\\quocv\\OneDrive\\Tài liệu\\GitHub\\API\\Project3-jamesthew\\Project3-jamesthew.csproj",
-        "packagesPath": "C:\\Users\\quocv\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\quocv\\OneDrive\\Tài liệu\\GitHub\\API\\Project3-jamesthew\\obj\\",
+        "projectPath": "G:\\Work\\Aptech\\eProject03\\API\\Project3-jamesthew\\Project3-jamesthew.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "G:\\Work\\Aptech\\eProject03\\API\\Project3-jamesthew\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "G:\\VS2022\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\quocv\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }

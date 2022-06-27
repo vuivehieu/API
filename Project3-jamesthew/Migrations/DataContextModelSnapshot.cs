@@ -255,7 +255,7 @@ namespace Project3_jamesthew.Migrations
 
                     b.HasIndex("RecipeCompetitionId");
 
-                    b.ToTable("announces", (string)null);
+                    b.ToTable("announces");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.CategoryEntity", b =>
@@ -284,7 +284,7 @@ namespace Project3_jamesthew.Migrations
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("categories", (string)null);
+                    b.ToTable("categories");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.ContactEntity", b =>
@@ -313,7 +313,7 @@ namespace Project3_jamesthew.Migrations
 
                     b.HasKey("ContactId");
 
-                    b.ToTable("contacts", (string)null);
+                    b.ToTable("contacts");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.ContestEntity", b =>
@@ -349,7 +349,7 @@ namespace Project3_jamesthew.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("contests", (string)null);
+                    b.ToTable("contests");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.FaqEntity", b =>
@@ -370,7 +370,7 @@ namespace Project3_jamesthew.Migrations
 
                     b.HasKey("FaqId");
 
-                    b.ToTable("faqs", (string)null);
+                    b.ToTable("faqs");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.FeedbackEntity", b =>
@@ -407,7 +407,7 @@ namespace Project3_jamesthew.Migrations
 
                     b.HasKey("FeedbackId");
 
-                    b.ToTable("feedbacks", (string)null);
+                    b.ToTable("feedbacks");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.IngredientEntity", b =>
@@ -434,7 +434,7 @@ namespace Project3_jamesthew.Migrations
 
                     b.HasIndex("RecipeCompetitionId");
 
-                    b.ToTable("ingredients", (string)null);
+                    b.ToTable("ingredients");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.RecipesCompetitionEntity", b =>
@@ -536,7 +536,7 @@ namespace Project3_jamesthew.Migrations
 
                     b.HasIndex("ContestId");
 
-                    b.ToTable("recipesCompetitions", (string)null);
+                    b.ToTable("recipesCompetitions");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.RecipesEntity", b =>
@@ -618,7 +618,7 @@ namespace Project3_jamesthew.Migrations
 
                     b.HasIndex("CategoriesId");
 
-                    b.ToTable("recipes", (string)null);
+                    b.ToTable("recipes");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.TipsEntity", b =>
@@ -643,7 +643,7 @@ namespace Project3_jamesthew.Migrations
 
                     b.HasKey("TipsId");
 
-                    b.ToTable("tipsEntities", (string)null);
+                    b.ToTable("tipsEntities");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.UserIngredientEntity", b =>
@@ -670,10 +670,10 @@ namespace Project3_jamesthew.Migrations
 
                     b.HasIndex("RecipesId");
 
-                    b.ToTable("usersIngredients", (string)null);
+                    b.ToTable("usersIngredients");
                 });
 
-            modelBuilder.Entity("Project3_jamesthew.Models.User", b =>
+            modelBuilder.Entity("Project3_jamesthew.Models.UserEntity", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
@@ -681,7 +681,7 @@ namespace Project3_jamesthew.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasDiscriminator().HasValue("User");
+                    b.HasDiscriminator().HasValue("UserEntity");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

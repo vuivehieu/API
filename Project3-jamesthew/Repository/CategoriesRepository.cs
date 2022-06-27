@@ -1,6 +1,7 @@
 ﻿using Project3_jamesthew.Entitites;
 using Project3_jamesthew.Data;
 using Microsoft.EntityFrameworkCore;
+using Project3_jamesthew.Models;
 
 namespace Project3_jamesthew.Repository
 {
@@ -31,9 +32,10 @@ namespace Project3_jamesthew.Repository
             return await _context.categories.FirstOrDefaultAsync(c => c.CategoryId == Id);
         }
 
-        public async Task<CategoryEntity> AddCategory(CategoryEntity cate)
+        public async Task<CategoryEntity> AddCategory(CategoryModel cate)
         {
-            var result = await _context.categories.AddAsync(cate);
+            cate.CategoryId = 0;
+            var result = await _context.categories.AddAsync(CategoryModel.toEntity(cate));
             await _context.SaveChangesAsync();
             return result.Entity;
         }
@@ -48,7 +50,7 @@ namespace Project3_jamesthew.Repository
             }
         }
 
-        public async Task<CategoryEntity> UpdateCategory(CategoryEntity cate)
+        public async Task<CategoryEntity> UpdateCategory(CategoryModel cate)
         {
             var result = await _context.categories
                 .FirstOrDefaultAsync(c => c.CategoryId == cate.CategoryId);
@@ -61,7 +63,10 @@ namespace Project3_jamesthew.Repository
                 await _context.SaveChangesAsync();
                 return result;
             }
-            return null;
+            else
+            {
+                return null;
+            }
         }
 
     }

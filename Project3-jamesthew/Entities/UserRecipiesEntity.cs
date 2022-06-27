@@ -35,7 +35,7 @@ namespace Project3_jamesthew.Entitites
             UserId = userId;
         }
         public virtual CategoryEntity Category { get; set; }
-        public User user { get; set; }
+        public UserEntity user { get; set; }
     }
 }
 */

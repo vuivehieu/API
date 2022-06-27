@@ -12,8 +12,8 @@ using Project3_jamesthew.Data;
 namespace Project3_jamesthew.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220621141953_ingre")]
-    partial class ingre
+    [Migration("20220627151719_newHieuMigration")]
+    partial class newHieuMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -228,6 +228,38 @@ namespace Project3_jamesthew.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Project3_jamesthew.Entitites.AnnounceEntity", b =>
+                {
+                    b.Property<int>("AnnounceId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AnnounceId"), 1L, 1);
+
+                    b.Property<DateTime>("AnnounceDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ContestId")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<int>("RecipeCompetitionId")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.HasKey("AnnounceId");
+
+                    b.HasIndex("ContestId");
+
+                    b.HasIndex("RecipeCompetitionId");
+
+                    b.ToTable("announces");
+                });
+
             modelBuilder.Entity("Project3_jamesthew.Entitites.CategoryEntity", b =>
                 {
                     b.Property<int>("CategoryId")
@@ -255,6 +287,92 @@ namespace Project3_jamesthew.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("categories");
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.ContactEntity", b =>
+                {
+                    b.Property<int>("ContactId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContactId"), 1L, 1);
+
+                    b.Property<string>("UserEmail")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("UserMessage")
+                        .IsRequired()
+                        .HasColumnType("varchar(1500)");
+
+                    b.Property<string>("UserNumber")
+                        .IsRequired()
+                        .HasColumnType("varchar(20)");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("ContactId");
+
+                    b.ToTable("contacts");
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.ContestEntity", b =>
+                {
+                    b.Property<int>("ContestId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ContestId"), 1L, 1);
+
+                    b.Property<int>("CategoryId")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<string>("ContestDescription")
+                        .IsRequired()
+                        .HasColumnType("varchar(1000)");
+
+                    b.Property<DateTime>("ContestEnd")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("ContestStart")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ContestTitle")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<bool>("IsOpen")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ContestId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("contests");
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.FaqEntity", b =>
+                {
+                    b.Property<int>("FaqId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FaqId"), 1L, 1);
+
+                    b.Property<string>("FaqAns")
+                        .IsRequired()
+                        .HasColumnType("varchar(1500)");
+
+                    b.Property<string>("FaqQuestion")
+                        .IsRequired()
+                        .HasColumnType("varchar(1500)");
+
+                    b.HasKey("FaqId");
+
+                    b.ToTable("faqs");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.FeedbackEntity", b =>
@@ -292,6 +410,135 @@ namespace Project3_jamesthew.Migrations
                     b.HasKey("FeedbackId");
 
                     b.ToTable("feedbacks");
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.IngredientEntity", b =>
+                {
+                    b.Property<int>("IngredientId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IngredientId"), 1L, 1);
+
+                    b.Property<string>("IngredientName")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Quantity")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<int>("RecipeCompetitionId")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.HasKey("IngredientId");
+
+                    b.HasIndex("RecipeCompetitionId");
+
+                    b.ToTable("ingredients");
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.RecipesCompetitionEntity", b =>
+                {
+                    b.Property<int>("RecipesCompetitionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RecipesCompetitionId"), 1L, 1);
+
+                    b.Property<int>("Calories")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<int>("Carbs")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<int>("ContestId")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<int>("CookingTime")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<string>("Difficulty")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<int>("Fat")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<int>("Fiber")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<int>("PrepationTime")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<int>("Proteins")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<string>("RecipesDescription")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("RecipesPic")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("RecipesTitle")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<int>("Salt")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<int>("SaturatedFat")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<int>("Serve")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SubmitDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Sugar")
+                        .HasMaxLength(20)
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserDescription")
+                        .IsRequired()
+                        .HasColumnType("varchar(500)");
+
+                    b.Property<string>("UserEmail")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("UserPic")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<string>("Winner")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("RecipesCompetitionId");
+
+                    b.HasIndex("ContestId");
+
+                    b.ToTable("recipesCompetitions");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.RecipesEntity", b =>
@@ -490,6 +737,58 @@ namespace Project3_jamesthew.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Project3_jamesthew.Entitites.AnnounceEntity", b =>
+                {
+                    b.HasOne("Project3_jamesthew.Entitites.ContestEntity", "Contest")
+                        .WithMany("Announces")
+                        .HasForeignKey("ContestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Project3_jamesthew.Entitites.RecipesCompetitionEntity", "RecipeCompetition")
+                        .WithMany("Announces")
+                        .HasForeignKey("RecipeCompetitionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contest");
+
+                    b.Navigation("RecipeCompetition");
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.ContestEntity", b =>
+                {
+                    b.HasOne("Project3_jamesthew.Entitites.CategoryEntity", "Category")
+                        .WithMany("contests")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.IngredientEntity", b =>
+                {
+                    b.HasOne("Project3_jamesthew.Entitites.RecipesCompetitionEntity", "RecipesCompetitions")
+                        .WithMany("ingredients")
+                        .HasForeignKey("RecipeCompetitionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("RecipesCompetitions");
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.RecipesCompetitionEntity", b =>
+                {
+                    b.HasOne("Project3_jamesthew.Entitites.ContestEntity", "Contest")
+                        .WithMany("RecipesCompetitions")
+                        .HasForeignKey("ContestId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Contest");
+                });
+
             modelBuilder.Entity("Project3_jamesthew.Entitites.RecipesEntity", b =>
                 {
                     b.HasOne("Project3_jamesthew.Entitites.CategoryEntity", "Category")
@@ -514,7 +813,23 @@ namespace Project3_jamesthew.Migrations
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.CategoryEntity", b =>
                 {
+                    b.Navigation("contests");
+
                     b.Navigation("recipes");
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.ContestEntity", b =>
+                {
+                    b.Navigation("Announces");
+
+                    b.Navigation("RecipesCompetitions");
+                });
+
+            modelBuilder.Entity("Project3_jamesthew.Entitites.RecipesCompetitionEntity", b =>
+                {
+                    b.Navigation("Announces");
+
+                    b.Navigation("ingredients");
                 });
 
             modelBuilder.Entity("Project3_jamesthew.Entitites.RecipesEntity", b =>

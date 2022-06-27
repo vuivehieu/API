@@ -2,7 +2,7 @@
 
 namespace Project3_jamesthew.DataTransferObjects
 {
-    public class AnnounceDto
+    public class AnnounceModel
     {
         public int AnnounceId { get; set; }
         public DateTime AnnounceDate { get; set; }

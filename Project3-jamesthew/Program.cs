@@ -11,12 +11,11 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-var connectionString = "Server=DESKTOP-A0MJBE0\\SQLEXPRESS;Database=Project3DB;Trusted_Connection=True;MultipleActiveResultSets=true";
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataContext")));
 
 builder.Services.AddTransient<ITipsRepository,TipsRepository>();
 builder.Services.AddTransient<ICategoriesRepository, CategoriesRepository>();
@@ -29,7 +28,7 @@ builder.Services.AddTransient<IAnnounceRepository, AnnounceRepository>();
 
 builder.Services.Configure<ApplicationSettings>(builder.Configuration.GetSection("ApplicationSettings"));
 
-builder.Services.AddIdentity<User,IdentityRole>().AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<UserEntity,IdentityRole>().AddEntityFrameworkStores<DataContext>().AddDefaultTokenProviders();
 //Jwt 
 var key = Encoding.UTF8.GetBytes(builder.Configuration["ApplicationSettings:Jwt_Secret"].ToString());
 builder.Services.AddAuthentication(x =>

@@ -593,7 +593,7 @@ namespace Project3_jamesthew.Migrations
                     b.ToTable("usersIngredients");
                 });
 
-            modelBuilder.Entity("Project3_jamesthew.Models.User", b =>
+            modelBuilder.Entity("Project3_jamesthew.Models.UserEntity", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
@@ -601,7 +601,7 @@ namespace Project3_jamesthew.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasDiscriminator().HasValue("User");
+                    b.HasDiscriminator().HasValue("UserEntity");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

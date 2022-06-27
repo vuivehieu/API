@@ -7,6 +7,7 @@ using Project3_jamesthew.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Project3_jamesthew.Entitites;
 
 namespace Project3_jamesthew.Controllers
 {
@@ -14,10 +15,10 @@ namespace Project3_jamesthew.Controllers
     [ApiController]
     public class AdminAppController : ControllerBase
     {
-        private UserManager<User> _userMng;
-        private SignInManager<User> _signInMng;
+        private UserManager<UserEntity> _userMng;
+        private SignInManager<UserEntity> _signInMng;
         private readonly ApplicationSettings _appSettings;
-        public AdminAppController(UserManager<User> userManager, SignInManager<User> signInMng,IOptions<ApplicationSettings> appSettings)
+        public AdminAppController(UserManager<UserEntity> userManager, SignInManager<UserEntity> signInMng,IOptions<ApplicationSettings> appSettings)
         {
             _userMng = userManager;
             _signInMng = signInMng;
@@ -25,9 +26,9 @@ namespace Project3_jamesthew.Controllers
         }
         [HttpPost]
         [Route("Register")]
-        public async Task<IActionResult> RegisterUser(UserViewModel model)
+        public async Task<IActionResult> RegisterUser(UserModel model)
         {
-            var user = new User()
+            var user = new UserEntity()
             {
                 UserName = model.UserName,
                 Email = model.Email,
@@ -48,15 +49,26 @@ namespace Project3_jamesthew.Controllers
         public async Task<IActionResult> Login(LoginModel model)
         {
             var user = await _userMng.FindByNameAsync(model.UserName);
+            int days = 0;
+            if (model.RememberMe)
+            {
+                days = 7;
+            }
+            else
+            {
+                days = 1;
+            }
             if(user != null && await _userMng.CheckPasswordAsync(user, model.Password))
             {
                 var tokenDescriptor = new SecurityTokenDescriptor
                 {
                     Subject = new ClaimsIdentity(new Claim[]
                     {
-                        new Claim("UserId",user.Id.ToString())
+                        new Claim("UserId",user.Id.ToString()),
+                        new Claim("UserName",user.UserName.ToString()),
+                        new Claim("UserEntity",user.ToString())
                     }),
-                    Expires = DateTime.UtcNow.AddDays(1),
+                    Expires = DateTime.UtcNow.AddDays(days),
                     SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_appSettings.Jwt_Secret)), SecurityAlgorithms.HmacSha256Signature)
                 };
                 var tokenHandler = new JwtSecurityTokenHandler();

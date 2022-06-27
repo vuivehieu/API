@@ -1,27 +1,13 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Project3_jamesthew.Entitites;
+using System.ComponentModel.DataAnnotations;
 
-namespace Project3_jamesthew.Entitites
+namespace Project3_jamesthew.Models
 {
-public class UserEntity : IdentityUser
-{
-/*       public UserEntity(string fullName)
+    public class UserEntity : IdentityUser
     {
-        FullName = fullName;
+
+        public string FullName { get; set; } 
+/*      public ICollection<UserRecipiesEntity> userRecipies { get; set; }*/
     }
-
-    public UserEntity(string userName, string fullName) : base(userName)
-    {
-        FullName = fullName;
-    }*/
-
-    public string FullName { get; set; }
-
-/*       public UserEntity()
-    {
-        
-    }*/
 }
-
-}
-
-

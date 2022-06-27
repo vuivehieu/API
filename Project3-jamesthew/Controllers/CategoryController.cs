@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Project3_jamesthew.Data;
 using Project3_jamesthew.Entitites;
+using Project3_jamesthew.Models;
 using Project3_jamesthew.Repository;
 
 namespace Project3_jamesthew.Controllers
@@ -21,11 +22,11 @@ namespace Project3_jamesthew.Controllers
             _hostEnvironment = hostEnvironment;
         }
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<CategoryEntity>>> GetAllCate()
+        public async Task<ActionResult<IEnumerable<CategoryDto>>> GetAllCate()
         {
             try
             {
-                return await _context.categories.Select(x => new CategoryEntity()
+                /*return await _context.categories.Select(x => new CategoryEntity()
                 {
                     CategoryId = x.CategoryId,
                     CategoryName = x.CategoryName,
@@ -33,7 +34,8 @@ namespace Project3_jamesthew.Controllers
                     CategoryIcon = x.CategoryIcon,
                     CategoryImg = x.CategoryImg,
                     ImageSrc = String.Format("{0}://{1}{2}/Images/{3}", Request.Scheme, Request.Host, Request.PathBase, x.CategoryImg)
-                }).ToListAsync();
+                }).ToListAsync();*/
+                return await _context.categories.Select(x => CategoryDto.toDto(x)).ToListAsync();
             }
             catch (Exception)
             {
@@ -50,7 +52,7 @@ namespace Project3_jamesthew.Controllers
                 var result = await _repository.GetCategoryById(id);
                 if(result != null)
                 {
-                    return Ok(result);
+                    return Ok(CategoryDto.toDto(result));
                 }
                 return NotFound();
             }
@@ -61,7 +63,7 @@ namespace Project3_jamesthew.Controllers
             }
         }
         [HttpPost]
-        public async Task<IActionResult> AddCate([FromForm] CategoryEntity cate)
+        public async Task<IActionResult> AddCate([FromForm] CategoryModel cate)
         {
             try
             {
@@ -69,7 +71,7 @@ namespace Project3_jamesthew.Controllers
                 {
                     cate.CategoryImg= await SaveImage(cate.ImageFile);
                     var result = await _repository.AddCategory(cate);
-                    return Ok(result);
+                    return Ok(CategoryDto.toDto(result));
                 }
                 return BadRequest();
             }
@@ -80,7 +82,7 @@ namespace Project3_jamesthew.Controllers
             }
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateCate(int id , [FromForm] CategoryEntity cate)
+        public async Task<IActionResult> UpdateCate(int id , [FromForm] CategoryModel cate)
         {
               if(id!= cate.CategoryId)
                 {
@@ -95,6 +97,7 @@ namespace Project3_jamesthew.Controllers
             try
             {
                 await _context.SaveChangesAsync();
+                return Ok(CategoryDto.toDto(await _repository.UpdateCategory(cate)));
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -107,9 +110,6 @@ namespace Project3_jamesthew.Controllers
                     throw;
                 }
             }
-
-            return NoContent();
-
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCate(int id)
@@ -121,7 +121,7 @@ namespace Project3_jamesthew.Controllers
                 {
                     DeleteImage(cateDelete.CategoryImg);
                     await _repository.DeleteCategory(id);
-                    return Ok();
+                    return Ok("Delete category successfully");
                 }
                 return NotFound($"Id = {id} not found");
             }

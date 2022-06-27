@@ -12,7 +12,7 @@ namespace Project3_jamesthew.Data
 
         }
   
-        public DbSet<User> users { get; set; }
+        public DbSet<UserEntity> users { get; set; }
         public DbSet<FeedbackEntity> feedbacks { get; set; }
         public DbSet<TipsEntity> tipsEntities { get; set; }
         public DbSet<CategoryEntity> categories { get; set; }

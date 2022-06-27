@@ -47,7 +47,7 @@ namespace Project3_jamesthew.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddAnnounce(AnnounceDto model)
+        public async Task<IActionResult> AddAnnounce(AnnounceModel model)
         {
             try
             {
@@ -73,7 +73,7 @@ namespace Project3_jamesthew.Controllers
             }
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateAnnounce(int? id , AnnounceDto model)
+        public async Task<IActionResult> UpdateAnnounce(int? id , AnnounceModel model)
         {
             try
             {
