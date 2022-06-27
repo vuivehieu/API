@@ -24,6 +24,8 @@ builder.Services.AddTransient<IRecipeRepository, RecipeRepository>();
 builder.Services.AddTransient<IUserIngredientRepository, UserIngredientRepository>();
 builder.Services.AddTransient<IContestRepository, ContestRepository>();
 builder.Services.AddTransient<IRecipesCompeRepository, RecipesCompetitionRepository>();
+builder.Services.AddTransient<IIngredientRepository, IngredientRepository>();
+builder.Services.AddTransient<IAnnounceRepository, AnnounceRepository>();
 
 builder.Services.Configure<ApplicationSettings>(builder.Configuration.GetSection("ApplicationSettings"));
 

@@ -37,9 +37,11 @@ namespace Project3_jamesthew.Entitites
         {
             
         }
-       
-    /*    public ICollection<Announce> Announces { get; set; }*/
+
         public CategoryEntity? Category { get; set; }
+
+        public ICollection<AnnounceEntity>? Announces { get; set; }
+
         public ICollection<RecipesCompetitionEntity> RecipesCompetitions { get; set; }
 
     }

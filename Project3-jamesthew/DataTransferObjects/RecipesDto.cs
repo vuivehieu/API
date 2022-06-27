@@ -53,8 +53,12 @@ namespace Project3_jamesthew.DataTransferObjects
         public string RecipesDescription { get; set; }
 
         public bool IsPaid { get; set; }
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
 
-       /* public CategoryEntity? Category { get;  }*/
+        [NotMapped]
+        public string ImageSrc { get; set; }
+        /* public CategoryEntity? Category { get;  }*/
 
     }
 }

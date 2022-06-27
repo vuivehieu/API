@@ -62,6 +62,11 @@ namespace Project3_jamesthew.Entitites
         
         public bool IsPaid { get; set; }
 
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
+
+        [NotMapped]
+        public string ImageSrc { get; set; }
         public RecipesEntity(int recipesId, int prepationTime, int cookingTime, EDifficulty difficulty, int serve, int calories, int proteins, int carbs, int fat, int saturatedFat, int fiber, int sugar, int salt, int categoriesId, string recipesPic, string recipesTitle, string recipesDescription, bool isPaid)
         {
             RecipesId = recipesId;

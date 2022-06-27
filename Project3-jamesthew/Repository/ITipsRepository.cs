@@ -10,5 +10,8 @@ namespace Project3_jamesthew.Repository
         Task<TipsEntity> AddTips(TipsEntity tips);
         Task<TipsEntity> UpdateTips(TipsEntity tips);
         Task DeleteTips(int Id);
+        bool CateModelExists(int id);
+        Task<string> SaveImage(IFormFile imageFile);
+        void DeleteImage(string imageName);
     }
 }

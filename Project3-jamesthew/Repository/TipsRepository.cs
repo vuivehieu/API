@@ -7,9 +7,11 @@ namespace Project3_jamesthew.Repository
     public class TipsRepository : ITipsRepository
     {
         private readonly DataContext _context;
-        public TipsRepository(DataContext context)
+        private readonly IWebHostEnvironment _hostEnvironment;
+        public TipsRepository(DataContext context, IWebHostEnvironment _hostEnvironment)
         {
-           this._context = context;
+            this._context = context;
+            this._hostEnvironment = _hostEnvironment;
         }
 
         public async Task<IEnumerable<TipsEntity>> GetAllTips()
@@ -54,5 +56,28 @@ namespace Project3_jamesthew.Repository
             }
         }
 
+        public bool CateModelExists(int id)
+        {
+            return _context.tipsEntities.Any(e => e.TipsId == id);
+        }
+
+        public async Task<string> SaveImage(IFormFile imageFile)
+        {
+            string imageName = new String(Path.GetFileNameWithoutExtension(imageFile.FileName).Take(10).ToArray()).Replace(' ', '-');
+            imageName = imageName + DateTime.Now.ToString("yymmssfff") + Path.GetExtension(imageFile.FileName);
+            var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, "Images", imageName);
+            using (var fileStream = new FileStream(imagePath, FileMode.Create))
+            {
+                await imageFile.CopyToAsync(fileStream);
+            }
+            return imageName;
+        }
+
+        public void DeleteImage(string imageName)
+        {
+            var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, "Images", imageName);
+            if (System.IO.File.Exists(imagePath))
+                System.IO.File.Delete(imagePath);
+        }
     }
 }

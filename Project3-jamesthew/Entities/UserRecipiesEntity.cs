@@ -12,10 +12,15 @@ namespace Project3_jamesthew.Entitites
         public string UserEmail { get; set; }
         [Required]
         public DateTime SubmitDate { get; set; }
-      
-        [StringLength(20)]
-        public int UserId { get; set; }
 
+        [StringLength(20)]
+        [ForeignKey("Category")]
+        public int CategoryId { get; set; }
+
+        [StringLength(20)]
+        [ForeignKey("user")]
+        public int UserId { get; set; }
+        
         public UserRecipiesEntity()
         {
             

@@ -48,7 +48,7 @@ namespace Project3_jamesthew.Controllers
  
         
         [HttpPost]
-        public async Task<IActionResult> CreateRecipe(RecipesDto model)
+        public async Task<IActionResult> CreateRecipe([FromForm] RecipesDto model)
         {
             try
             {
@@ -73,7 +73,10 @@ namespace Project3_jamesthew.Controllers
                         RecipesDescription = model.RecipesDescription,
                         IsPaid = model.IsPaid,
                         CategoriesId = model.CategoriesId,
+                        ImageFile = model.ImageFile,
+                        ImageSrc = model.ImageSrc,
                     };
+                    recipe.RecipesPic = await _repository.SaveImage(recipe.ImageFile);
                     var result = await _repository.AddRecipe(recipe);
                     return Ok(result);
                 }
@@ -89,7 +92,7 @@ namespace Project3_jamesthew.Controllers
         }
 
         [HttpPut("{id}")]
-          public async Task<IActionResult> UpdateRecipes(int? id, RecipesDto model)
+          public async Task<IActionResult> UpdateRecipes(int? id, [FromForm] RecipesDto model)
         {
             try
             {
@@ -120,7 +123,11 @@ namespace Project3_jamesthew.Controllers
                         RecipesDescription = model.RecipesDescription,
                         IsPaid = model.IsPaid,
                         CategoriesId = model.CategoriesId,
-                    };
+                       ImageFile = model.ImageFile,
+                       ImageSrc = model.ImageSrc,
+                   };
+                    _repository.DeleteImage(recipe.RecipesPic);
+                    recipe.RecipesPic = await _repository.SaveImage(recipe.ImageFile);
                     var result =  await _repository.UpdateRecipe(recipe);
                     return Ok(result);
                 }
@@ -140,6 +147,7 @@ namespace Project3_jamesthew.Controllers
                 var recipeDelete = await _repository.GetRecipeById(id);
                 if (recipeDelete != null)
                 {
+                    _repository.DeleteImage(recipeDelete.RecipesPic);
                     await _repository.DeleteRecipe(id);
                     return Ok();
                 }

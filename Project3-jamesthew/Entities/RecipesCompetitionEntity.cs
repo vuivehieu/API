@@ -76,7 +76,11 @@ namespace Project3_jamesthew.Entitites
         [Column(TypeName = "varchar(500)")]
         [Required]
         public string UserDescription { get; set; }
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
 
+        [NotMapped]
+        public string ImageSrc { get; set; }
         public RecipesCompetitionEntity(int recipesCompetitionId, int prepationTime, int cookingTime, EDifficulty difficulty, int serve, int calories, int proteins, int carbs, int fat, int saturatedFat, int fiber, int sugar, int salt, int contestId, string recipesPic, string recipesTitle, string recipesDescription, string userName, string userEmail, DateTime submitDate, string winner, string userPic, string userDescription)
         {
             RecipesCompetitionId = recipesCompetitionId;
@@ -110,9 +114,8 @@ namespace Project3_jamesthew.Entitites
         }
 
         public ContestEntity? Contest { get; set; }
-/*        public ICollection<Announce> Announces { get; set; }
-        public ICollection<IngredientCompetition> IngredientCompetitions { get; set; }
-*/
+        public ICollection<IngredientEntity> ingredients { get; set; }
+        public ICollection<AnnounceEntity>? Announces { get; set; }
 
     }
 }

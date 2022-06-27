@@ -9,5 +9,7 @@ namespace Project3_jamesthew.Repository
         Task<RecipesEntity> AddRecipe(RecipesEntity recipe);
         Task<RecipesEntity> UpdateRecipe(RecipesEntity recipe);
         Task DeleteRecipe(int Id);
+        Task<string> SaveImage(IFormFile imageFile);
+        void DeleteImage(string imageName);
     }
 }

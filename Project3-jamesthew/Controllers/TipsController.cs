@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Project3_jamesthew.Data;
 using Project3_jamesthew.Entitites;
 using Project3_jamesthew.Repository;
 
@@ -10,17 +12,28 @@ namespace Project3_jamesthew.Controllers
     public class TipsController : ControllerBase
     {
         private readonly ITipsRepository _repository;
-        public TipsController(ITipsRepository repository)
+        private readonly DataContext _context;
+        private readonly IWebHostEnvironment _hostEnvironment;
+        public TipsController(ITipsRepository repository,DataContext context,IWebHostEnvironment hostEnvironment)
         {
             this._repository = repository;
+            this._context = context;
+            _hostEnvironment = hostEnvironment;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetTips()
+        public async Task<ActionResult<IEnumerable<TipsEntity>>> GetTips()
         {
             try
             {
-                return Ok(await _repository.GetAllTips());
+                return await _context.tipsEntities.Select(x => new TipsEntity()
+                {
+                    TipsId = x.TipsId,
+                    TipsTitle = x.TipsTitle,
+                    TipsDescription = x.TipsDescription,    
+                    TipsImage = x.TipsImage,
+                    ImageSrc = String.Format("{0}://{1}{2}/Images/{3}", Request.Scheme, Request.Host, Request.PathBase, x.TipsImage)
+                }).ToListAsync();
             }
             catch (Exception)
             {
@@ -45,7 +58,7 @@ namespace Project3_jamesthew.Controllers
             }
         }
         [HttpPost]
-        public async Task<IActionResult> AddTips(TipsEntity tips)
+        public async Task<IActionResult> AddTips([FromForm] TipsEntity tips)
         {
             try
             {
@@ -53,6 +66,7 @@ namespace Project3_jamesthew.Controllers
                 {
                     return BadRequest();
                 }
+                tips.TipsImage = await _repository.SaveImage(tips.ImageFile);
                 var result = await _repository.AddTips(tips);
                 return Ok(result);
             }
@@ -63,7 +77,7 @@ namespace Project3_jamesthew.Controllers
             }
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateTips(int id,TipsEntity tips)
+        public async Task<IActionResult> UpdateTips(int id, [FromForm] TipsEntity tips)
         {
             try
             {
@@ -71,9 +85,11 @@ namespace Project3_jamesthew.Controllers
                 {
                     return BadRequest();
                 }
-                var tipsUpdate = await _repository.GetTipsById(id);
-                if (tipsUpdate != null)
+               
+                if (tips.ImageFile != null)
                 {
+                    _repository.DeleteImage(tips.TipsImage);
+                    tips.TipsImage = await _repository.SaveImage(tips.ImageFile);
                     var result = await _repository.UpdateTips(tips);
                     return Ok(result);
                 }
@@ -92,6 +108,7 @@ namespace Project3_jamesthew.Controllers
               var tipsDelete = await _repository.GetTipsById(id);   
                 if(tipsDelete != null)
                 {
+                    _repository.DeleteImage(tipsDelete.TipsImage);
                     await _repository.DeleteTips(id);
                      return Ok();
                 }
@@ -102,7 +119,6 @@ namespace Project3_jamesthew.Controllers
                 return BadRequest( "Error updating data");
             }
         }
-
-
+     
     }
 }

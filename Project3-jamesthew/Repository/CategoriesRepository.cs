@@ -13,7 +13,7 @@ namespace Project3_jamesthew.Repository
         }
         public async Task<List<CategoryEntity>> GetAllCategory(string search)
         {
-            #region Search
+           #region Search
             var allCate =   _context.categories.AsQueryable();
             if (!string.IsNullOrEmpty(search))
             {
@@ -22,7 +22,8 @@ namespace Project3_jamesthew.Repository
             #endregion
 
             return await allCate.ToListAsync();
-            
+
+     
         }
 
         public async Task<CategoryEntity> GetCategoryById(int Id)
@@ -62,5 +63,6 @@ namespace Project3_jamesthew.Repository
             }
             return null;
         }
+
     }
 }

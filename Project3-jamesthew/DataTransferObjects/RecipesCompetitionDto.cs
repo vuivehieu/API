@@ -1,5 +1,6 @@
 ﻿using Project3_jamesthew.Models;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project3_jamesthew.DataTransferObjects
 {
@@ -50,5 +51,10 @@ namespace Project3_jamesthew.DataTransferObjects
         public string UserPic { get; set; }
         [Required]
         public string UserDescription { get; set; }
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
+
+        [NotMapped]
+        public string ImageSrc { get; set; }
     }
 }

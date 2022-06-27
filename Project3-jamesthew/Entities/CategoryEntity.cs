@@ -19,7 +19,13 @@ namespace Project3_jamesthew.Entitites
         [Column(TypeName = "varchar(1000)")]
         [Required]
         public string CategoryImg { get; set; }
-        
+
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
+
+
+        [NotMapped]
+        public string ImageSrc { get; set; }
 
         public CategoryEntity(int categoryId, string categoryName, string categoryDescription, string categoryImg, string categoryIcon)
         {
@@ -36,7 +42,7 @@ namespace Project3_jamesthew.Entitites
         }
         public ICollection<RecipesEntity>? recipes { get; }
         public ICollection<ContestEntity>? contests { get; set; }
-       
-
+       /*
+        public ICollection<UserRecipiesEntity> userRecipies { get; set; }*/
     }
 }

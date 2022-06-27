@@ -17,7 +17,12 @@ namespace Project3_jamesthew.Entitites
         [Column(TypeName = "varchar(1500)")]
         [Required]
         public string TipsImage { get; set; }
+        [NotMapped]
+        public IFormFile ImageFile { get; set; }
 
+
+        [NotMapped]
+        public string ImageSrc { get; set; }
         public TipsEntity(int tipsId, string tipsImage, string tipsDescription, string tipsTitle)
         {
             TipsId = tipsId;

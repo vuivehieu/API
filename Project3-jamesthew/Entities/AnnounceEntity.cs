@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project3_jamesthew.Entitites
 {
+    
     public class AnnounceEntity
     {
         [Key]
@@ -14,24 +16,31 @@ namespace Project3_jamesthew.Entitites
         public string Email { get; set; }
         [Required]
         [StringLength(20)]
+        [ForeignKey("Contest")]
         public int ContestId { get; set; }
+       
+        public ContestEntity? Contest { get; set; }
+
         [Required]
-        [Column(TypeName = "int(10)")]
+        [StringLength(20)]
+        [ForeignKey("RecipeCompetition")]
         public int RecipeCompetitionId { get; set; }
 
+        public RecipesCompetitionEntity? RecipeCompetition { get; set; }
         public AnnounceEntity()
         {
             
         }
 
-        public AnnounceEntity(DateTime announceDate, int contestId, int recipeCompetitionId, string email)
+        public AnnounceEntity(int announceId, DateTime announceDate, int contestId, int recipeCompetitionId, string email)
         {
-            this.AnnounceDate = announceDate;
-            this.ContestId = contestId;
-            this.RecipeCompetitionId = recipeCompetitionId;
-            this.Email = email;
+            AnnounceId = announceId;
+            AnnounceDate = announceDate;
+            ContestId = contestId;
+            RecipeCompetitionId = recipeCompetitionId;
+            Email = email;
         }
-        public ContestEntity Contest { get; set; }
-       /* public virtual RecipesCompetition RecipesCompetition { get; set; }*/
+       
+        
     }
 }

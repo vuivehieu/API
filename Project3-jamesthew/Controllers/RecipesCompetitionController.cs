@@ -46,7 +46,7 @@ namespace Project3_jamesthew.Controllers
             }
         }
         [HttpPost]
-        public async Task<IActionResult> AddRecipeCompetition(RecipesCompetitionDto model)
+        public async Task<IActionResult> AddRecipeCompetition([FromForm] RecipesCompetitionDto model)
         {
             try
             {
@@ -76,8 +76,11 @@ namespace Project3_jamesthew.Controllers
                         SubmitDate = model.SubmitDate,
                         Winner = model.Winner,
                         UserPic = model.UserPic,
-                        UserDescription = model.UserDescription
+                        UserDescription = model.UserDescription,
+                        ImageFile = model.ImageFile,
+                        ImageSrc = model.ImageSrc,
                     };
+                    entity.RecipesPic = await _repository.SaveImage(entity.ImageFile);
                     var result = await _repository.AddRecipesCompe(entity);
                     return Ok(result);
                 }
@@ -90,7 +93,7 @@ namespace Project3_jamesthew.Controllers
             }
         }
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateRecipeCompetition(int? id, RecipesCompetitionDto model)
+        public async Task<IActionResult> UpdateRecipeCompetition(int? id, [FromForm] RecipesCompetitionDto model)
         {
             try
             {
@@ -124,8 +127,12 @@ namespace Project3_jamesthew.Controllers
                         SubmitDate = model.SubmitDate,
                         Winner = model.Winner,
                         UserPic = model.UserPic,
-                        UserDescription = model.UserDescription
+                        UserDescription = model.UserDescription,
+                        ImageFile = model.ImageFile,
+                        ImageSrc = model.ImageSrc,
                     };
+                    _repository.DeleteImage(entity.RecipesPic);
+                    entity.RecipesPic = await _repository.SaveImage(entity.ImageFile);
                     var result = await _repository.UpdateRecipesCompe(entity);
                     return Ok(result);
                 }
@@ -146,6 +153,7 @@ namespace Project3_jamesthew.Controllers
                 var result = await _repository.GetRecipesCompeById(id);
                 if(result != null)
                 {
+                    _repository.DeleteImage(result.RecipesPic);
                     await _repository.DeleteRecipesCompetition(id);
                     return Ok();
                 }

@@ -7,9 +7,11 @@ namespace Project3_jamesthew.Repository
     public class RecipeRepository : IRecipeRepository
     {
         private readonly DataContext _context;
-        public RecipeRepository(DataContext context)
+        private readonly IWebHostEnvironment _hostEnvironment;
+        public RecipeRepository(DataContext context, IWebHostEnvironment hostEnvironment)
         {
             this._context = context;
+            _hostEnvironment = hostEnvironment;
         }
         public async Task<List<RecipesEntity>> GetAllRecipes()
         {
@@ -66,6 +68,25 @@ namespace Project3_jamesthew.Repository
             }
             return null;
 
+        }
+    
+        public async Task<string> SaveImage(IFormFile imageFile)
+        {
+            string imageName = new String(Path.GetFileNameWithoutExtension(imageFile.FileName).Take(10).ToArray()).Replace(' ', '-');
+            imageName = imageName + DateTime.Now.ToString("yymmssfff") + Path.GetExtension(imageFile.FileName);
+            var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, "Images", imageName);
+            using (var fileStream = new FileStream(imagePath, FileMode.Create))
+            {
+                await imageFile.CopyToAsync(fileStream);
+            }
+            return imageName;
+        }
+
+        public void DeleteImage(string imageName)
+        {
+            var imagePath = Path.Combine(_hostEnvironment.ContentRootPath, "Images", imageName);
+            if (System.IO.File.Exists(imagePath))
+                System.IO.File.Delete(imagePath);
         }
     }
 }
