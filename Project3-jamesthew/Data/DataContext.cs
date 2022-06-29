@@ -24,6 +24,6 @@ namespace Project3_jamesthew.Data
         public DbSet<AnnounceEntity> announces { get; set; }
         public DbSet<ContactEntity> contacts { get; set; }
         public DbSet<FaqEntity> faqs { get; set; }
-       /* public DbSet<UserRecipiesEntity> userRecipies { get; set; }*/
+        public DbSet<UserRecipiesEntity> UserRecipies { get; set; }
     }
 }
